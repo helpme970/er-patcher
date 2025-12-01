@@ -5,9 +5,19 @@ A tool aimed at enhancing the experience when playing the game by patching the e
 
 > Please note that all these patches may won't work after the release of Elden Ring on the Switch 2, because they might change the engine in a way that breaks this tool. I'll try to update and make it working again if this happens.
 
-## Warning
+## Features
+- change fps
+- remove 60hz lock in fullscreen
+- run without Easy Anti Cheat
+- disable rune loss
+- remove black bars (useful for ultrawidescreens)
+- disable vignette
+- disable chromatic abberation
+- increase animation distance
+- skip intro logos
 
-**This tool is based on patching the game executable through hex-edits. However it is done in a safe and non-destructive way, that ensures the patched executable is never run with EAC enabled (unless explicity told to do so). Use at your own risk!**
+## Changes made to er-patcher
+- allow one time/permanent patch
 
 ## Dependencies
 
@@ -17,6 +27,10 @@ A tool aimed at enhancing the experience when playing the game by patching the e
 
 1. Copy the file `er-patcher` to the game directory.
 2. In steam, set the game launch options to `python er-patcher ARGS -- %command%` See [Features](#features) for available options.
+  - Example for the Steam Deck for one (permanent) patch:
+
+    `python er-patcher --all --rate 30 -p -- %command%`
+    
   - Example:
 
     `python er-patcher --all --rate 30 --disable-rune-loss -- %command%`
