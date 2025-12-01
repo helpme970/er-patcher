@@ -3,6 +3,8 @@
 
 A tool aimed at enhancing the experience when playing the game by patching the executable so you don't need to mess with .dlls.
 
+> Please note that all these patches may won't work after the release of Elden Ring on the Switch 2, because they might change the engine in a way that breaks this tool. I'll try to update and make it working again if this happens.
+
 ## Warning
 
 **This tool is based on patching the game executable through hex-edits. However it is done in a safe and non-destructive way, that ensures the patched executable is never run with EAC enabled (unless explicity told to do so). Use at your own risk!**
