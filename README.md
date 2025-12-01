@@ -1,7 +1,7 @@
-# Elden Ring Proton Patcher
+# Elden Ring Proton Patcher 2
 
 
-A tool aimed at enhancing the experience when playing the game on linux through proton or natively on windows.
+A tool aimed at enhancing the experience when playing the game by patching the executable so you don't need to mess with .dlls.
 
 ## Warning
 
