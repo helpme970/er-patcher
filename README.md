@@ -16,6 +16,8 @@ A tool aimed at enhancing the experience when playing the game by patching the e
 - increase animation distance
 - skip intro logos
 
+> All features are Tested with Elden Ring version 1.16
+
 ## Changes made to er-patcher
 - allow one time/permanent patch
 
