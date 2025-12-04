@@ -18,6 +18,8 @@ A tool aimed at enhancing the experience when playing the game by patching the e
 
 > All features are Tested with Elden Ring version 1.16
 
+> working with and without Shadow of the Erdtree dlc
+
 ## Changes made to er-patcher
 - allow one time/permanent patch
 
