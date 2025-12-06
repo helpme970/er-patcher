@@ -90,7 +90,7 @@ Note 2: Ensure Vertical Sync is turned off for Elden Ring in Nvidia Control Pane
 When the game is launched through steam, the tool creates a patched version of `eldenring.exe` in a temporary subdirectory while leaving the original intact. As long the flag `--with-eac` is not set, the tool modifies the steam launch command to launch the patched executable instead of `start_protected_game.exe`, thefore ensuring that the patched exe is never run with EAC enabled. After the game is closed, the patched executable is removed.
 
 ## Credits
-
+- [er-patcher](https://github.com/gurrgur/er-patcher) by gurrgur, they did the most work, I just changed some things in their project
 - [EldenRingFpsUnlockAndMore](https://github.com/uberhalit/EldenRingFpsUnlockAndMore)
   - frame time limit adjustment
   - black bar removal
