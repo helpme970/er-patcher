@@ -104,7 +104,9 @@ if __name__ == "__main__":
             ca_patch = "66 0f ef c9".replace(" ", "")  # PXOR XMM1,XMM1
             if exe_hex[ca_addr:ca_addr + len(ca_patch)] == ca_orig:
                 exe_hex = exe_hex[:ca_addr] + ca_patch + exe_hex[ca_addr + len(ca_patch):]
-            print("\033[92m✓ er-patcher: disable ca")
+                print("\033[92m✓ er-patcher: disable ca")
+            else:
+                print("\033[91m✗ er-patcher: disable ca pattern does not match")
         else:
             print("\033[91m✗ er-patcher: disable ca pattern scan failed")
 
