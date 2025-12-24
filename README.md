@@ -23,16 +23,23 @@ A tool aimed at enhancing the experience when playing the game by patching the e
 
 > working with and without Shadow of the Erdtree dlc
 
-## Changes made to er-patcher
+<details>
+<summary><h2>Changes made to er-patcher</h2></summary>
 - allow one time/permanent patch
+- always center camera to player
+- faster respawn
+- fix camera (disables the camera reset when trying to lock-on with no target in range)
+- disable camera auto rotate
+- debug output
+- colored output
+</details>
 
 ## Dependencies
-
 - Python >= 3.8
 
 ## Usage
 
-1. Copy the file `er-patcher` to the game directory.
+1. Copy the file `er-patcher` to the game directory or specify the path to the game via the `--gamepath` option.
 2. In steam, set the game launch options to `python er-patcher ARGS -- %command%` See [Features](#features) for available options.
   - Example for the Steam Deck for one (permanent) patch:
 
@@ -71,11 +78,17 @@ If you have issues, verify your game files and make sure that no other patch is 
 | `--disable-rune-loss`                   | Disable losing runes upon death.                                                                          |
 | `--all`                                 | Enable all options except `--rate`, `--executable`, and<br>gameplay changes like `--disable-rune-loss`.   |
 | `-u` or `--ultrawide`                   | Remove black bars.                                                                                        |
-| `-v` or `--disable-vignette`           | Remove the vignette overlay.                                                                             |
+| `-v` or `--disable-vignette`            | Remove the vignette overlay.                                                                              |
 | `-c` or `--disable-ca`                  | Disable chromatic abberation.                                                                             |
 | `-a` or `--increase-animation-distance` | Fix low frame rate animations at screen<br>edges or for distant entities.                                 |
 | `-s` or `--skip-intro`                  | Skip intro logos at game start.                                                                           |
 | `-f` or `--remove-60hz-fullscreen`      | Remove the 60Hz limit in fullscreen<br>mode (not needed with proton).                                     |
+| `-p` or `--permanent`                   | Make the patches permanent.                                                                               |
+| `-q` or `--quick-respawn`               | Respawn a few seconds faster.                                                                             |
+| `-e` or `--player-camera`               | Always center camera to player.                                                                           |
+| `-y` or `--fix-camera`                  | Disables the camera reset when trying to<br>lock-on with no target in range.                              |
+| `-b` or `--no-rotate-camera`            | Disable camera auto rotate.                                                                               |
+| `-g path/to/game` or `--gamepath path/to/game`| Specify path to game.                                                                               |
 
 ## Windows Support
 
@@ -104,3 +117,4 @@ When the game is launched through steam, the tool creates a patched version of `
   - disable rune loss
 - [Center Camera on Player](https://github.com/ImAxel0/EldenRing-CenterCameraOnPlayer-Mod/)
 - [Faster Respawn](https://github.com/ImAxel0/EldenRing-FasterRespawn-Mod/)
+- let me know if I forgot your contribution
