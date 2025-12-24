@@ -196,7 +196,7 @@ if __name__ == "__main__":
     if patch.permanent:
         if patch.with_eac:
             if os.path.exists(f"{game_dir}/eldenring.exe"):
-                copy("eldenring.exe", "eldenring.exe.bak")
+                copy(f"{game_dir}/eldenring.exe", f"{game_dir}/eldenring.exe.bak")
                 print("eldenring.exe backuped as eldenring.exe.bak")
             else:
                 exit("\033[91meldenring.exe does not exist")
@@ -204,7 +204,7 @@ if __name__ == "__main__":
             print("\033[93mEAC enabled, you may be banned with this patches")
         else:
             if os.path.exists(f"{game_dir}/start_protected_game.exe"):
-                copy("start_protected_game.exe", "start_protected_game.exe.bak")
+                copy(f"{game_dir}/start_protected_game.exe", f"{game_dir}/start_protected_game.exe.bak")
                 print("start_protected_game.exe backuped as start_protected_game.exe.bak")
             exe = f"{game_dir}/start_protected_game.exe"
             print("\033[92mEAC disabled, you cannot go online on official servers")
