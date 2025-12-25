@@ -82,7 +82,7 @@ If you have issues, verify your game files and make sure that no other patch is 
 | `--with-eac`                            | Run game with EAC (Use it at your own risk).<br>Mutually exclusive with `--executable`.                   |
 | `--disable-rune-loss`                   | Disable losing runes upon death.                                                                          |
 | `--all`                                 | Enable all options except `--rate`, `--executable`, and<br>gameplay changes like `--disable-rune-loss`.   |
-| `-u` or `--ultrawide`                   | Remove black bars.                                                                                        |
+| `-u` or `--ultrawide`                   | Remove black bars. (recommended for any monitor other than 16:9)                                          |
 | `-v` or `--disable-vignette`            | Remove the vignette overlay.                                                                              |
 | `-c` or `--disable-ca`                  | Disable chromatic abberation.                                                                             |
 | `-a` or `--increase-animation-distance` | Fix low frame rate animations at screen<br>edges or for distant entities.                                 |
