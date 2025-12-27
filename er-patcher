@@ -68,6 +68,7 @@ if __name__ == "__main__":
     
     with open(game_dir / "eldenring.exe", "rb") as f:
         exe_hex = f.read().hex()
+        f.close()
 
     if patches.fix_camera:
         pattern = "80 .. .. .. .. .. 00 74 .. .. 8b .. e8 .. .. .. .. eb .. 0f 28 .. .. .. .. .. .. 8d".replace(" ", "")
