@@ -231,7 +231,7 @@ if __name__ == "__main__":
         del exe_hex
 
         exe = exe.replace("\\", "/")
-        print(f"Patches permanently written to {os.path.join(exe.split('/'))}")
+        print(f"Patches permanently written to {os.path.join(exe)}")
     else:
         game_dir_patched = Path(f"{game_dir}/er-patcher-tmp/")
 
