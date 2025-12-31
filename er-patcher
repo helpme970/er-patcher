@@ -64,8 +64,18 @@ if __name__ == "__main__":
 
     if patches.gamepath[-1] == "/" or patches.gamepath[-1] == "\\":
         patches.gamepath = patches.gamepath[:len(patches.gamepath)-1]
-    game_dir = Path(patches.gamepath)
-    
+
+    if os.path.exists(f"{patches.gamepath}/eldenring.exe"):
+        game_dir = Path(patches.gamepath)
+    elif os.path.exists("~/.local/share/Steam/steamapps/common/ELDEN RING/Game/eldenring.exe"):
+        game_dir = Path("~/.local/share/Steam/steamapps/common/ELDEN RING/Game/eldenring.exe")
+    elif os.path.exists("C:/Program Files/Steam/steamapps/common/ELDEN RING/Game/eldenring.exe"):
+        game_dir = Path("C:/Program Files/Steam/steamapps/common/ELDEN RING/Game/eldenring.exe")
+    elif os.path.exists("C:/Program Files (x86)/Steam/steamapps/common/ELDEN RING/Game/eldenring.exe"):
+        game_dir = Path("C:/Program Files (x86)/Steam/steamapps/common/ELDEN RING/Game/eldenring.exe")
+    else:
+        exit("\033[91mCould not find eldenring.exe\033[m")
+
     exe_hex = open(game_dir / "eldenring.exe", "rb").read().hex()
 
     if patches.fix_camera:
@@ -217,11 +227,11 @@ if __name__ == "__main__":
             print("\033[92mEAC disabled, you cannot go online on official servers\033[m")
 
         # patch elden ring
-        with open(exe, "wb") as f:
-            f.write(bytes.fromhex(exe_hex))
+        open(exe, "wb").write(bytes.fromhex(exe_hex))
         del exe_hex
 
-        print(f"Patches permanently written to {exe}")
+        exe = exe.replace("\\", "/")
+        print(f"Patches permanently written to {os.path.join(exe.split('/'))}")
     else:
         game_dir_patched = Path(f"{game_dir}/er-patcher-tmp/")
 
