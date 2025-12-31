@@ -77,21 +77,21 @@ If you have issues, verify your game files and make sure that no other patch is 
 
 | Argument                                | Description                                                                                               |
 | --------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `-r RATE` or `--rate RATE`              | Set a custom framerate limit (default: 60).                                                               |
-| `-x EXE` or `--executable EXE`          | The executable to launch, relative to the games folder. Mutually exclusive with `--with-eac`.          |
-| `--with-eac`                            | Run game with EAC (Use it at your own risk). Mutually exclusive with `--executable`.                   |
+| `-r RATE` or `--rate RATE`              | Set a custom framerate limit (default: 60). (Can be lowered for better performance)                       |
+| `-x EXE` or `--executable EXE`          | The executable to launch, relative to the games folder. Mutually exclusive with `--with-eac`.             |
+| `--with-eac`                            | Run game with EAC (Use it at your own risk). Mutually exclusive with `--executable`.                      |
 | `--disable-rune-loss`                   | Disable losing runes upon death.                                                                          |
-| `--all`                                 | Enable all options except `--rate`, `--executable`, and gameplay changes like `--disable-rune-loss`.   |
+| `--all`                                 | Enable all options except `--rate`, `--executable`, and gameplay changes like `--disable-rune-loss`.      |
 | `-u` or `--ultrawide`                   | Remove black bars. (recommended for any monitor other than 16:9)                                          |
 | `-v` or `--disable-vignette`            | Remove the vignette overlay.                                                                              |
 | `-c` or `--disable-ca`                  | Disable chromatic abberation.                                                                             |
-| `-a` or `--increase-animation-distance` | Fix low frame rate animations at screen edges or for distant entities.                                 |
+| `-a` or `--increase-animation-distance` | Fix low frame rate animations at screen edges or for distant entities.                                    |
 | `-s` or `--skip-intro`                  | Skip intro logos at game start.                                                                           |
-| `-f` or `--remove-60hz-fullscreen`      | Remove the 60Hz limit in fullscreen mode (not needed with proton).                                     |
+| `-f` or `--remove-60hz-fullscreen`      | Remove the 60Hz limit in fullscreen mode (not needed with proton).                                        |
 | `-p` or `--permanent`                   | Make the patches permanent.                                                                               |
 | `-q` or `--quick-respawn`               | Respawn a few seconds faster.                                                                             |
 | `-e` or `--player-camera`               | Always center camera to player.                                                                           |
-| `-y` or `--fix-camera`                  | Disables the camera reset when trying to lock-on with no target in range.                              |
+| `-y` or `--fix-camera`                  | Disables the camera reset when trying to lock-on with no target in range.                                 |
 | `-b` or `--no-rotate-camera`            | Disable camera auto rotate.                                                                               |
 | `-g path/to/game` or `--gamepath path/to/game`| Specify path to game.                                                                               |
 
